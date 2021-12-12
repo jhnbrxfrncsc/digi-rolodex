@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/digi-rolodex/static/css/main.dc185865.chunk.css",
+    "main.css": "/digi-rolodex/static/css/main.8402003b.chunk.css",
     "main.js": "/digi-rolodex/static/js/main.3b2f8ddc.chunk.js",
     "main.js.map": "/digi-rolodex/static/js/main.3b2f8ddc.chunk.js.map",
     "runtime-main.js": "/digi-rolodex/static/js/runtime-main.8ee385f5.js",
@@ -8,13 +8,13 @@
     "static/js/2.5e63249b.chunk.js": "/digi-rolodex/static/js/2.5e63249b.chunk.js",
     "static/js/2.5e63249b.chunk.js.map": "/digi-rolodex/static/js/2.5e63249b.chunk.js.map",
     "index.html": "/digi-rolodex/index.html",
-    "static/css/main.dc185865.chunk.css.map": "/digi-rolodex/static/css/main.dc185865.chunk.css.map",
+    "static/css/main.8402003b.chunk.css.map": "/digi-rolodex/static/css/main.8402003b.chunk.css.map",
     "static/js/2.5e63249b.chunk.js.LICENSE.txt": "/digi-rolodex/static/js/2.5e63249b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8ee385f5.js",
     "static/js/2.5e63249b.chunk.js",
-    "static/css/main.dc185865.chunk.css",
+    "static/css/main.8402003b.chunk.css",
     "static/js/main.3b2f8ddc.chunk.js"
   ]
 }
