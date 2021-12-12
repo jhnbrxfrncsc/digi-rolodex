@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './app.css';
+import axios from 'axios';
+import CardList from './components/CardList';
+import SearchBox from './components/SearchBox';
 
-function App() {
+const App = () => {
+  const [digimons, setDigimons] = useState([]);
+  const [searchField, setSearchField] = useState();
+  // const url = "https://jsonplaceholder.typicode.com/users";
+  // const url = "https://digimon-api.vercel.app/api/digimon";
+  const url = "https://digimon-api.herokuapp.com/api/digimon/level/rookie";
+  const getUsers = async () => {
+    const digiData = await axios.get(url);
+    setDigimons(digiData.data);
+  }
+  
+  useEffect(() => {
+    getUsers();
+  }, []);
+  
+  const searchEvent = (e) => {
+    setSearchField(e.target.value)
+  }
+
+  const filteredDigimons = digimons.filter((digimon) => {
+    if(searchField){
+        return digimon.name.toLowerCase().includes(searchField.toLowerCase())
+    } else {
+        return digimon;
+    }
+  });
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Digimon Rolodex</h1>
+      <SearchBox handleChange={searchEvent} placeholder="Search..." />
+      <CardList digimons={filteredDigimons} />
     </div>
-  );
+  )
 }
 
 export default App;
