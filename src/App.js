@@ -7,8 +7,6 @@ import SearchBox from './components/SearchBox';
 const App = () => {
   const [digimons, setDigimons] = useState([]);
   const [searchField, setSearchField] = useState();
-  // const url = "https://jsonplaceholder.typicode.com/users";
-  // const url = "https://digimon-api.vercel.app/api/digimon";
   const url = "https://digimon-api.herokuapp.com/api/digimon/level/rookie";
   const getUsers = async () => {
     const digiData = await axios.get(url);
